@@ -13,9 +13,22 @@ public class ManagerVars : ScriptableObject {
     }
 
 	public List<Sprite> bgThemeList = new List<Sprite>();
-
+    public List<Sprite> platformThemeSpriteList = new List<Sprite>();
+    public List<Sprite> skinSpriteList = new List<Sprite>();
+    public GameObject skinChooseItem;
     public GameObject grassPlatform;
     public GameObject Charactor1;
+    public List<string> skinNameList = new List<string>();
+
+    public List<int> skinPrice = new List<int>();
+    public List<GameObject> commonPlatformGroup = new List<GameObject>();
+    public List<GameObject> grassPlatformGroup = new List<GameObject>();
+    public List<GameObject> winterPlatformGroup = new List<GameObject>();
+    public List<GameObject> SpikePlatformGroup = new List<GameObject>();
+    public List<Sprite> charactorSkinSpriteList = new List<Sprite>();
+
+    public GameObject deathEffect;
+    public GameObject diamond;
 
     public float nextXPos = 0.554f;
 

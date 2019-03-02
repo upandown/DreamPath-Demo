@@ -13,7 +13,14 @@ public class GamePanel : MonoBehaviour {
     private void Awake()
     {
         EventCenter.AddListener(EventType.ShowGamePanel, Show);//监听游戏开始的事件码
+        EventCenter.AddListener<int>(EventType.UpdateScoreText, UpdateScoreText);
+        EventCenter.AddListener<int>(EventType.updateDiamondText, updateDiamondText);
         Init();
+    }
+    //更新成绩显示
+    private void UpdateScoreText(int score)
+    {
+        txt_score.text = score.ToString();
     }
 
     private void Init() {
@@ -32,6 +39,8 @@ public class GamePanel : MonoBehaviour {
     private void OnDestroy()
     {
         EventCenter.RemoveListenter(EventType.ShowGamePanel, Show);
+        EventCenter.RemoveListenter<int>(EventType.UpdateScoreText, UpdateScoreText);
+        EventCenter.RemoveListenter<int>(EventType.updateDiamondText, updateDiamondText);
     }
 
     private void Show() {
@@ -41,11 +50,18 @@ public class GamePanel : MonoBehaviour {
     private void OnPlayButtonClick(){
         btn_play.gameObject.SetActive(false);
         btn_pause.gameObject.SetActive(true);
-
+        Time.timeScale = 1;
+        GameManager.Instance.IsPause = false;
     }
     private void OnPauseButtonClick() {
         btn_play.gameObject.SetActive(true);
         btn_pause.gameObject.SetActive(false);
+        Time.timeScale = 0;
+        GameManager.Instance.IsPause =true;
+    }
 
+    private void updateDiamondText(int diamond)
+    {
+        txt_diamondText.text = diamond.ToString();
     }
 }

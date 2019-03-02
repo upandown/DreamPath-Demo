@@ -8,13 +8,42 @@ public class MainPanel : MonoBehaviour {
     private Button btn_shop;
     private Button btn_rank;
     private Button btn_sound;
-
-    public void Awake()
+    private ManagerVars vars;
+    private void Awake()
     {
+        EventCenter.AddListener(EventType.ShowMainPanel, Show);
+        EventCenter.AddListener<int>(EventType.ChangeSkin,ChangeSkin);
         Init();
-        GameManager.Instance.IsGameStarted = false;
+        //GameManager.Instance.IsGameStarted = false;
+        vars = ManagerVars.GetManagerVars();
+       
     }
- 
+    private void OnDestroy()
+    {
+        EventCenter.RemoveListenter(EventType.ShowMainPanel, Show);
+    }
+
+    private void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void ChangeSkin(int index)
+    {
+        //btn_shop.transform.GetChild(0).GetComponent<Image>().sprite = vars.skinSpriteList[index];
+    }
+
+    private void Start()
+    {
+        if (GameData.IsAgainGame)
+        {
+            EventCenter.Broadcast(EventType.ShowGamePanel);
+            gameObject.SetActive(false);
+        }
+
+        ChangeSkin(GameManager.Instance.GetSelectSkin());
+
+    }
 
     private void Init()
     {
@@ -36,7 +65,8 @@ public class MainPanel : MonoBehaviour {
     }
     private void OnShopButtonClick()
     {
-
+        gameObject.SetActive(false);
+        EventCenter.Broadcast(EventType.ShowShopPanel); 
     }
     private void OnRankButtonClick() {
     }

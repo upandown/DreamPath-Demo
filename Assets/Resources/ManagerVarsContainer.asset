@@ -16,8 +16,49 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5feddf0396f8fd842b6a2034a343e884, type: 3}
   - {fileID: 21300000, guid: 274864b118ac4f54589e32e7035cd77f, type: 3}
   - {fileID: 21300000, guid: 81cb795749aefac4ea7663bc3f7f71fb, type: 3}
+  platformThemeSpriteList:
+  - {fileID: 21300002, guid: 20da7e56cbb26b3498b25fb61fa9a7ff, type: 3}
+  - {fileID: 21300012, guid: 20da7e56cbb26b3498b25fb61fa9a7ff, type: 3}
+  - {fileID: 21300004, guid: 20da7e56cbb26b3498b25fb61fa9a7ff, type: 3}
+  - {fileID: 21300000, guid: 20da7e56cbb26b3498b25fb61fa9a7ff, type: 3}
+  skinSpriteList:
+  - {fileID: 21300000, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  - {fileID: 21300004, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  - {fileID: 21300008, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  - {fileID: 21300012, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  skinChooseItem: {fileID: 1550072158452844, guid: a5c5badbb7ee9e84c87dac33bcc59339,
+    type: 2}
   grassPlatform: {fileID: 1468695864429336, guid: 29fc7c40f6501e34da45e1c7cfee67a3,
     type: 2}
   Charactor1: {fileID: 1649324396944850, guid: 6fec64d8dad5e8a49975646ad0c0337b, type: 2}
+  skinNameList:
+  - "\u4E8C\u8D27"
+  - "\u5B81\u5BB6"
+  - "\u7EA2\u9F3B\u5934"
+  - "\u5DE6\u6BD4"
+  skinPrice: 0000000001000000140000001e000000
+  commonPlatformGroup:
+  - {fileID: 1999654114412760, guid: e5e4c76eddeab6a40a8a30d5670d23fe, type: 2}
+  - {fileID: 1315940536035808, guid: f3dff4d9bfa2e1746abb98e93aceffce, type: 2}
+  - {fileID: 1197976710382752, guid: d5e6d085761315b43abd8aa9ebe1fc95, type: 2}
+  - {fileID: 1767075111127624, guid: be455fb3a0964574aa40b64e07576162, type: 2}
+  grassPlatformGroup:
+  - {fileID: 1545128621395322, guid: cd08fdd4c0a41bf43a7b89522338f830, type: 2}
+  - {fileID: 1562172110975570, guid: 51841f858fbaba24c89fd076eb90fcdc, type: 2}
+  winterPlatformGroup:
+  - {fileID: 1649290223467552, guid: ef073df22fb821942ba846c0531847b8, type: 2}
+  - {fileID: 1915495816245846, guid: 0edbe8942a1516a43a2358c0b8f2eae5, type: 2}
+  SpikePlatformGroup:
+  - {fileID: 1430196716402566, guid: 6dccb46271088f746975ef146b19bc98, type: 2}
+  - {fileID: 1544561513467610, guid: 5e502a3347c38f544b093ad7a2a16dcc, type: 2}
+  charactorSkinSpriteList:
+  - {fileID: 21300002, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  - {fileID: 21300006, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  - {fileID: 21300010, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  - {fileID: 21300014, guid: 0c7b4faa2ba890e45a9bcb89c3349cde, type: 3}
+  deathEffect: {fileID: 1768541122089714, guid: 7ccfee5d65caa964ca1ee9793c1f3cc0,
+    type: 2}
+  diamond: {fileID: 1724395028717300, guid: 679d10a79ab3f82428aae51c8292b7bc, type: 2}
   nextXPos: 0.554
   nextYPos: 0.645
+  ZPos: -1197.16

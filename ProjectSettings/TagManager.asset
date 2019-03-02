@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - Obstacle
+  - PickUp
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - 
   - effect
-  - 
-  - 
+  - Platform
+  - Obstacle
   - 
   - 
   - 
@@ -44,6 +46,9 @@ TagManager:
     locked: 0
   - name: Platfom
     uniqueID: 4285878607
+    locked: 0
+  - name: PickUp
+    uniqueID: 3955561375
     locked: 0
   - name: Player
     uniqueID: 470347199
